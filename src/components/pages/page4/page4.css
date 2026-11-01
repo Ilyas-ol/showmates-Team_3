@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&family=Inter:wght@400;500&display=swap");
+
+/* Scoped under .page4 so it can't leak into the other pages */
+.page4 {
+  --p4-bg: #0a0b09;
+  --p4-surface: #131411;
+  --p4-fg: #f3f5ee;
+  --p4-muted: #a3a89a;
+  --p4-line: #23261f;
+  --p4-lime: #9dff00;
+  --p4-display: "Stardos Stencil", "Rockwell", Georgia, serif;
+  --p4-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  position: relative;
+  overflow: hidden;
+  background: var(--p4-bg);
+  color: var(--p4-fg);
+  font-family: var(--p4-body);
+  font-size: 14px;
+  line-height: 1.55;
+  padding: 56px 16px 72px;
+}
+.page4 *,
+.page4 *::before,
+.page4 *::after {
+  box-sizing: border-box;
+}
+
+.p4-glow {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  width: min(1500px, 190vw);
+  max-width: none;
+  height: auto;
+  opacity: 0.75;
+  transform: translateX(-50%);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.p4-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* heading: lime number / slash / white stencil title */
+.p4-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+}
+.p4-num {
+  font-family: var(--p4-display);
+  font-weight: 400;
+  font-size: clamp(40px, 6vw, 52px);
+  line-height: 1;
+  color: var(--p4-lime);
+}
+.p4-slash {
+  flex: none;
+  width: 1px;
+  height: 38px;
+  background: #3a3d34;
+  transform: rotate(28deg);
+}
+.p4-title {
+  font-family: var(--p4-display);
+  font-weight: 700;
+  font-size: clamp(28px, 4.6vw, 38px);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+/* cards */
+.p4-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+.p4-card {
+  min-height: 200px;
+  padding: 26px 24px 30px;
+  background: var(--p4-surface);
+  border: 1px solid #1d1f19;
+  border-radius: 12px;
+  box-shadow: 0 0 28px rgba(157, 255, 0, 0.06);
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.p4-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(157, 255, 0, 0.35);
+  box-shadow: 0 12px 36px rgba(157, 255, 0, 0.14);
+}
+@media (prefers-reduced-motion: reduce) {
+  .p4-card { transition: none; }
+  .p4-card:hover { transform: none; }
+}
+.p4-card svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin-bottom: 22px;
+  fill: none;
+  stroke: var(--p4-lime);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.p4-card h3 {
+  margin: 0 0 16px;
+  font-family: var(--p4-display);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+}
+.p4-card p {
+  margin: 0;
+  color: var(--p4-muted);
+  font-size: 12.5px;
+}
+.p4-rule {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--p4-line);
+}
+
+@media (max-width: 960px) {
+  .p4-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .page4 { padding-top: 40px; padding-bottom: 56px; }
+  .p4-cards { grid-template-columns: minmax(0, 1fr); }
+}
