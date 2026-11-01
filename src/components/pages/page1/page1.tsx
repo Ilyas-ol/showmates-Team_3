@@ -13,7 +13,7 @@ function  Page1() {
               <h1 className='bigtext'>SHELLMATES CLUB</h1>
           </div>
 
-          <div>
+          <div className='typing'>
               <h1 className='white'>Learn. Build. Compete. Connect.</h1>
           </div>
 
