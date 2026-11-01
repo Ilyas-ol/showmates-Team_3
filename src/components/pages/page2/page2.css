@@ -1,0 +1,74 @@
+.p2{
+    height: 80vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.up{
+    /* background-color: black; */
+    height: 20%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.changefont{
+    font-size: 50px;
+    font-family: 'Bodoni Moda', serif;
+}
+.down{
+    height: 70%;
+    width: 90%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftp2{
+    height: 90%;
+    width: 47%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+}
+
+.p2img{
+    height: 100%;
+    width: 47%;
+}
+
+
+.sub1{
+    /* background-color: greenyellow; */
+}
+
+
+
+.sub3{
+    height: 30%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+}
+
+.sub3div{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    gap: 10px;
+}
