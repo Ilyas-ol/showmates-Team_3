@@ -19,6 +19,7 @@
     list-style: none;
     font: Inter;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .logo{
@@ -41,19 +42,19 @@
     background-color: #9AFF00;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .white{
     color: white;
 }
 
-
-.listwheight{
-    font-weight:lighter;
-    font-style: normal;
+.joinbtn:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
 }
 
-.joinbtn:hover{
+.listelm:hover{
     transform: scale(1.1);
     transition: 0.6s;
 }

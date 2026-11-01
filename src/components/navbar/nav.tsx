@@ -13,11 +13,11 @@ function  Navbar() {
         </div>
 
         <ul className='list'>
-            <li className='white listwheight'>About</li>
-            <li className='white '>Structure</li>
-            <li className='white'>What we do</li>
-            <li className='white'>Events & projects</li>
-            <li className='white'>Why join?</li>
+            <li className='white listelm'>About</li>
+            <li className='white listelm'>Structure</li>
+            <li className='white listelm'>What we do</li>
+            <li className='white listelm'>Events & projects</li>
+            <li className='white listelm'>Why join?</li>
         </ul>
 
         <div className='joinbtn'>

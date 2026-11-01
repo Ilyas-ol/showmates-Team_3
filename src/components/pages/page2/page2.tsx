@@ -6,7 +6,9 @@ function  Page2() {
 
   return (
     <>
-      
+      <section>
+        
+      </section>
     </>
   )
 }
