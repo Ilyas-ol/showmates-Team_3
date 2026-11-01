@@ -15,12 +15,12 @@ function  Page2() {
         <div className='down'>
           <div className='leftp2'>
             <div className='sub1'>
-              <h1 className='white'>A shared curiosity. <br />
+              <h1 className='white subtitle'>A shared curiosity. <br />
               A stronger cyber community.</h1>
             </div>
 
             <div className='sub2'>
-              <h3 className='white'>We’re a student club at ESI Algiers, founded in 2011 as OWASP. We promote cybersecurity awareness in Algeria by learning together and turning knowledge into practice.</h3>
+              <h3 className='white description'>We’re a student club at ESI Algiers, founded in 2011 as OWASP. We promote cybersecurity awareness in Algeria by learning together and turning knowledge into practice.</h3>
             </div>
 
             <div className='sub3'>

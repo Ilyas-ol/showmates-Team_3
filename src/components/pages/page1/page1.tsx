@@ -19,7 +19,7 @@ function  Page1() {
 
           <div className='btncontainer'>
               <div className='p1btn1'>
-                <p>Join the Club</p>
+                <p style={{ color: "#000000" }}>Join the Club</p>
                 <img src="fleche.png" alt="" />
               </div>
 

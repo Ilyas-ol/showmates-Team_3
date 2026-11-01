@@ -21,7 +21,7 @@ function  Navbar() {
         </ul>
 
         <div className='joinbtn'>
-          <p>Join us</p>
+          <p style={{ color: "#000000" }}>Join us</p>
           <img src="fleche.png" alt="" />
         </div>
       </nav>
