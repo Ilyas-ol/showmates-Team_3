@@ -9,6 +9,7 @@ function  Page2() {
       <section className='p2'>
         <div className='up'>
           <img src="/p2num.png" alt="" />
+          <img src="/line.png" alt="" />
           <h1 className='white changefont'>WHO ARE WE ?</h1>
         </div>
 

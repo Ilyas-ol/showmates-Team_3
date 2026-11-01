@@ -92,3 +92,8 @@ background:
   line-height: 1.6;
   color: #BDBDBD;
 }
+
+.p2img:hover{
+    transform: scale(1.06);
+    transition: 0.6s;
+}
