@@ -10,7 +10,8 @@
   --p4-lime: #9dff00;
   --p4-display: "Stardos Stencil", "Rockwell", Georgia, serif;
   --p4-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-
+  width: 100%;             
+  min-height: 80vh; 
   position: relative;
   overflow: hidden;
   background: var(--p4-bg);
@@ -18,7 +19,7 @@
   font-family: var(--p4-body);
   font-size: 14px;
   line-height: 1.55;
-  padding: 56px 16px 72px;
+  padding: 56px 0px 72px;
 }
 .page4 *,
 .page4 *::before,
@@ -43,8 +44,9 @@
 .p4-inner {
   position: relative;
   z-index: 1;
-  max-width: 1040px;
-  margin: 0 auto;
+  width: 90%;               
+  max-width: none;          
+  margin: 0 auto;  
   display: flex;
   flex-direction: column;
   gap: 48px;

@@ -12,6 +12,8 @@
   --p3-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --p3-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
 
+  width: 100%;             
+  min-height: 80vh; 
   position: relative;
   overflow: hidden;
   background: var(--p3-bg);
@@ -19,7 +21,7 @@
   font-family: var(--p3-body);
   font-size: 14px;
   line-height: 1.55;
-  padding: 56px 16px 72px;
+  padding: 56px 0px 72px;
 }
 .page3 *,
 .page3 *::before,
@@ -44,8 +46,9 @@
 .p3-inner {
   position: relative;
   z-index: 1;
-  max-width: 1040px;
-  margin: 0 auto;
+  width: 90%;               
+  max-width: none;          
+  margin: 0 auto;           
   display: flex;
   flex-direction: column;
   gap: 48px;
