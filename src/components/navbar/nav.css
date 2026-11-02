@@ -34,6 +34,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    text-decoration: none;
 }
 
 .joinbtn{
@@ -48,6 +49,10 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    text-decoration: none;
+}
+.joinbtn p{
+    margin: 0;
 }
 
 .white{
@@ -57,6 +62,12 @@
 .joinbtn:hover{
     transform: scale(1.1);
     transition: 0.6s;
+}
+
+.listelm{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
 }
 
 .listelm:hover{

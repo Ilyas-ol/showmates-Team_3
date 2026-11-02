@@ -86,6 +86,16 @@
     animation: slideInFrombottom 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
+.p1btn1,
+.p1btn2{
+    text-decoration: none;
+}
+
+.p1btn1 p,
+.p1btn2 p{
+    margin: 0;
+}
+
 .p1btn1{
     height: 70%;
     width: 40%;

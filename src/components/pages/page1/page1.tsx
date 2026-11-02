@@ -6,7 +6,7 @@ function  Page1() {
 
   return (
     <>
-      <section className='page1'>
+      <section className='page1' id="home">
         <div className='container '>
           <p className='green'>$ whoami</p>
           <div className='bigdiv'>
@@ -18,15 +18,15 @@ function  Page1() {
           </div>
 
           <div className='btncontainer'>
-              <div className='p1btn1'>
+              <a className='p1btn1' href="#join">
                 <p style={{ color: "#000000" }}>Join the Club</p>
-                <img src="fleche.png" alt="" />
-              </div>
+                <img src="/fleche.png" alt="" />
+              </a>
 
-              <div className='p1btn2'>
+              <a className='p1btn2' href="#events">
                 <p>Explore Events</p>
-                <img src="flecheBL.png" alt="" />
-              </div>
+                <img src="/flecheBL.png" alt="" />
+              </a>
           </div>
         </div>
       </section>

@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&family=Inter:wght@400;500&display=swap");
+
+/* Scoped under .page7 so it can't leak into the other pages */
+.page7 {
+  --p7-bg: #0a0b09;
+  --p7-fg: #f3f5ee;
+  --p7-muted: #a3a89a;
+  --p7-line: #23261f;
+  --p7-lime: #9dff00;
+  --p7-display: "Stardos Stencil", "Rockwell", Georgia, serif;
+  --p7-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  position: relative;
+  overflow: hidden;
+  background: var(--p7-bg);
+  color: var(--p7-fg);
+  font-family: var(--p7-body);
+  font-size: 14px;
+  line-height: 1.55;
+  padding: 56px 16px 64px;
+}
+.page7 *,
+.page7 *::before,
+.page7 *::after {
+  box-sizing: border-box;
+}
+
+.p7-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* heading: lime number / slash / white stencil title */
+.p7-title {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+}
+.p7-num {
+  font-family: var(--p7-display);
+  font-weight: 400;
+  font-size: clamp(40px, 6vw, 52px);
+  line-height: 1;
+  color: var(--p7-lime);
+}
+.p7-slash {
+  flex: none;
+  width: 1px;
+  height: 38px;
+  background: #3a3d34;
+  transform: rotate(28deg);
+}
+.p7-title > span:last-child {
+  font-family: var(--p7-display);
+  font-weight: 700;
+  font-size: clamp(28px, 4.6vw, 38px);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+/* gains */
+.p7-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 28px 24px;
+}
+.p7-item {
+  min-height: 118px;
+}
+.p7-item svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin-bottom: 18px;
+  fill: none;
+  stroke: var(--p7-lime);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.p7-item h3 {
+  margin: 0 0 12px;
+  font-family: var(--p7-display);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1;
+}
+.p7-item p {
+  margin: 0;
+  color: var(--p7-muted);
+  font-size: 10.5px;
+}
+
+@media (max-width: 960px) {
+  .p7-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .page7 {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  .p7-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+  }
+  .p7-item {
+    min-height: 0;
+  }
+}

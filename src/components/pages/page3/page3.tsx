@@ -27,15 +27,14 @@ const MAX_VALUE = Math.max(...STATS.map((s) => s.value));
 
 function useInView<T extends Element>(threshold = 0.35) {
   const ref = useRef<T | null>(null);
-  const [inView, setInView] = useState(false);
+  const [inView, setInView] = useState(
+    () => typeof IntersectionObserver === "undefined"
+  );
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (typeof IntersectionObserver === "undefined") {
-      setInView(true);
-      return;
-    }
+    if (typeof IntersectionObserver === "undefined") return;
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.intersectionRatio >= threshold) setInView(true);

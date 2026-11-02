@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700;800&family=Stardos+Stencil:wght@400;700&family=Inter:wght@400;500&display=swap");
+
+/* Scoped under .page8 so it can't leak into the other pages */
+.page8 {
+  --p8-bg: #0a0b09;
+  --p8-fg: #f3f5ee;
+  --p8-muted: #a3a89a;
+  --p8-lime: #9dff00;
+  --p8-display: "Bodoni Moda", "Bodoni 72", Georgia, serif;
+  --p8-label: "Stardos Stencil", "Rockwell", Georgia, serif;
+  --p8-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 50% 82%,
+      rgba(157, 255, 0, 0.17) 0%,
+      rgba(157, 255, 0, 0.05) 36%,
+      transparent 68%
+    ),
+    var(--p8-bg);
+  color: var(--p8-fg);
+  font-family: var(--p8-body);
+  font-size: 14px;
+  line-height: 1.55;
+  padding: 88px 16px 30px;
+}
+.page8 *,
+.page8 *::before,
+.page8 *::after {
+  box-sizing: border-box;
+}
+
+.p8-glow {
+  position: absolute;
+  left: 50%;
+  bottom: -34vw;
+  width: min(1700px, 190vw);
+  max-width: none;
+  height: auto;
+  opacity: 0.8;
+  transform: translateX(-50%);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.p8-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* call to action */
+.p8-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-top: 24px;
+  text-align: center;
+}
+.p8-cta h2 {
+  margin: 0;
+  font-family: var(--p8-display);
+  font-weight: 700;
+  font-size: clamp(40px, 7vw, 64px);
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.p8-cta h2 span {
+  display: block;
+}
+.p8-cta p {
+  margin: 0;
+  max-width: 52ch;
+  color: var(--p8-muted);
+  font-size: 12px;
+}
+.p8-join {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 11px 20px;
+  border-radius: 6px;
+  background: var(--p8-lime);
+  color: #050604;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.3s ease;
+}
+.p8-join img {
+  width: 12px;
+  height: 12px;
+}
+.p8-join:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(157, 255, 0, 0.25);
+}
+
+/* footer */
+.p8-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  margin-top: 110px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(35, 38, 31, 0.7);
+}
+.p8-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-self: start;
+  color: var(--p8-fg);
+  font-family: var(--p8-label);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.p8-brand img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+.p8-socials {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  font-size: 9.5px;
+}
+.p8-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--p8-muted);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.p8-socials a:hover {
+  color: var(--p8-lime);
+}
+.p8-socials span {
+  font-size: 8px;
+}
+.p8-copy {
+  justify-self: end;
+  margin: 0;
+  color: var(--p8-muted);
+  font-size: 9.5px;
+}
+.p8-credit {
+  margin: 16px 0 0;
+  color: #6f7568;
+  font-size: 8px;
+}
+
+@media (max-width: 720px) {
+  .page8 {
+    padding-top: 64px;
+  }
+  .p8-footer {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 18px;
+    margin-top: 72px;
+  }
+  .p8-brand,
+  .p8-copy {
+    justify-self: center;
+  }
+  .p8-credit {
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p8-join {
+    transition: none;
+  }
+  .p8-join:hover {
+    transform: none;
+  }
+}

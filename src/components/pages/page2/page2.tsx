@@ -6,7 +6,7 @@ function  Page2() {
 
   return (
     <>
-      <section className='p2'>
+      <section className='p2' id="about">
         <div className='up'>
           <img src="/p2num.png" alt="" />
           <img src="/line.png" alt="" />

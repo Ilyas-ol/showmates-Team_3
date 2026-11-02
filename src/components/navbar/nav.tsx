@@ -7,23 +7,23 @@ function  Navbar() {
   return (
     <>
       <nav className='nav'>
-        <div className='logo'>
+        <a className='logo' href="#home">
           <img src="/Group.png" alt="" />
           <h3 className='white logotext'>SHELLMATES</h3>
-        </div>
+        </a>
 
         <ul className='list'>
-            <li className='white listelm'>About</li>
-            <li className='white listelm'>Structure</li>
-            <li className='white listelm'>What we do</li>
-            <li className='white listelm'>Events & projects</li>
-            <li className='white listelm'>Why join?</li>
+            <li><a className='white listelm' href="#about">About</a></li>
+            <li><a className='white listelm' href="#p3-structure">Structure</a></li>
+            <li><a className='white listelm' href="#p4-what">What we do</a></li>
+            <li><a className='white listelm' href="#events">Events &amp; projects</a></li>
+            <li><a className='white listelm' href="#why-join">Why join?</a></li>
         </ul>
 
-        <div className='joinbtn'>
+        <a className='joinbtn' href="#join">
           <p style={{ color: "#000000" }}>Join us</p>
-          <img src="fleche.png" alt="" />
-        </div>
+          <img src="/fleche.png" alt="" />
+        </a>
       </nav>
     </>
   )

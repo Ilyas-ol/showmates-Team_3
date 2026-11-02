@@ -23,6 +23,11 @@ body {
   width: 100%;
 }
 
+section[id],
+h2[id] {
+  scroll-margin-top: 10vh;
+}
+
 img {
   max-width: 100%;
 }
