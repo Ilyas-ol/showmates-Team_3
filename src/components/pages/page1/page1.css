@@ -35,11 +35,14 @@
     }
 }
 .page1{
-    height: 100vh;
-    background-image: url(/backimg.png);
-    background-size: 100% ;
-    background-position: center;
-    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-height: 100svh;
+    background-image:
+        url("/Subtle purple tint.png"),
+        url("/IMG_3109 1 (2).png");
+    background-size: 100% 100%, 100%;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
